@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Game</title>
+		<meta name="description" content="サイトキャプションを入力">
+		<meta name="keywords" content="サイトキーワードを,で区切って入力">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<script>
+            document.execCommand("DefaultParagragphSeparator", false, "p");
+            addEventListener('load',function(){
+                preview();
+            });
+            document.addEventListener('keyup',function() {
+                preview();
+            });
+            document.addEventListener('paste',function() {
+                window.setTimeout(preview, 0);
+            });
+            function preview() {
+                var obj = document.activeElement;
+                var view = document.getElementById('view');
+                var code = document.getElementById("code");
+                document.getElementById("view").style.height = window.innerHeight - 50 + "px";
+                document.getElementById("code").style.height = window.innerHeight - 50 + "px";
+                if(obj.id == "view") {
+                    code.value = view.innerHTML;
+                } else {
+                    view.innerHTML = code.value;
+                }
+            }
+        </script>
+	</head>
+
+	<body>
+		<!----- ヘッダー ----->
+		<header>ヘッダー
+			<nav>
+				<ul>
+					<li><a href="./from_index/chaos.html" target="_blank" rel="nofollow noopener">ごちゃごちゃ</a></li>
+					<li><a href="./from_index/ctf.html" target="_blank" rel="nofollow noopener">CTF</a></li>
+					<li><a href="./from_index/history.html" target="_blank" rel="nofollow noopener">足跡</a></li>
+					<li><a href="./from_index/trophy.html" target="_blank" rel="nofollow noopener">実績</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!----- ヘッダー END ----->
+		
+		<!----- メインコンテンツ ----->
+		<article>
+            <div id="view" contenteditable="true" style="height: 623px;">
+			<h1>Game</h1>
+			<section>
+				<h2>なんかキャッチコピー考えよう</h2>
+				<p>なんかキャプション考えよう</p>
+			</section>
+            </div>
+		</article>
+        <textarea id="code" style="height: 623px">
+        </textarea>
+		<!----- メインコンテンツ END ----->
+		
+		<!----- フッター ----->
+		<footer>
+			<p>@caesarsalad</p>
+		</footer>
+		<!----- フッター END ----->
+	</body>
+</html>
