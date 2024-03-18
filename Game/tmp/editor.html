@@ -10,6 +10,16 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<![endif]-->
+        <style>
+            #view {
+                width: 45%;
+                overflow: auto;
+                float: left;
+            }
+            #code {
+                width: 45%;
+            }
+        </style>
 		<script>
             document.execCommand("DefaultParagragphSeparator", false, "p");
             addEventListener('load',function(){
@@ -58,9 +68,11 @@
 				<h2>なんかキャッチコピー考えよう</h2>
 				<p>なんかキャプション考えよう</p>
 			</section>
+            <input type="button" value="テスト用ボタン" onclick="alert('ボタンが押されました')">
             </div>
 		</article>
         <textarea id="code" style="height: 623px">
+            <h3 style="color:navy;fontsize:30px">HTML</h3>
         </textarea>
 		<!----- メインコンテンツ END ----->
 		
