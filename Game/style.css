@@ -142,3 +142,29 @@ a:hover {
 .rotatefront:hover span:nth-child(2) {
     transform: rotateX(0deg);/* X軸に0度回転 */
 }
+
+/*落ちてくやつ*/
+.fadeDown {
+    animation-name: fadeDownAnime;/*アニメーションの定義名*/
+    animation-duration:1s;/*アニメーション変化時間 ※デフォルト*/
+    animation-delay: 2s;
+    animation-fill-mode: forwards;/*アニメーションの開始と終了時の状態を指定*/
+    opacity: 1;
+}
+
+.change-time15{
+    animation-duration: 1.5s;
+}
+    
+/*アニメーションの開始から終了までを指定する*/
+@keyframes fadeDownAnime{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
