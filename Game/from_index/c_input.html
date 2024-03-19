@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C to WebAssembly Compiler</title>
 </head>
 <body>
-    <a href="../index.html" target="_blank" rel="nofollow noopener">トップページ</a>
-    <h1>
-        ここでC言語のコードを入力
-    </h1>
+  <h1>C to WebAssembly Compiler</h1>
+  <textarea id="code" rows="10" cols="50" placeholder="Enter your C code here..."></textarea>
+  <br>
+  <button onclick="compile()">Compile and Run</button>
+  <div id="output"></div>
+  <iframe id="result" style="width:100%; height:500px; border:none;"></iframe>
 
-    <!-- <h2>Hello World!</h2> -->
-    <form action="#" method="post">
-        <p>cコード記述<br>
-        <textarea name="c_code" cols=120 rows=40>#include<stdio.h>
-int main(void){
-    printf("Hello World!/n");
-    return 0;
-}</textarea >
-        </p>
-        <p><input type="button" value="送信" id="button2" method="GET"></p>
-    </form>
+  <script>
+    async function compile() {
+      const code = document.getElementById('code').value;
+      const response = await fetch('/compile', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ code: code })
+      });
+      const html = await response.text();
+      //document.getElementById('output').innerHTML = html;
+      //document.getElementById('result').srcdoc = html;
+    }
+  </script>
 
-    
 </body>
 </html>
