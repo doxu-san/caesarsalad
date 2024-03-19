@@ -6,5 +6,8 @@
   },
   "scripts": {
     "build:azure": "npm run compile"
+  },
+  "engines": {
+    "node": "18.17.1" 
   }
 }
