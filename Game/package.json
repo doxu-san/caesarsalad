@@ -5,9 +5,10 @@
     "express": "^4.18.3"
   },
   "scripts": {
+    "compile": " ",
     "build:azure": "npm run compile"
   },
   "engines": {
-    "node": "18.17.1" 
+    "node": "18.17.0" 
   }
 }
