@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // Azure Blob Storage接続情報
-const connectionString = 'ココにアクセスキー';
+const connectionString = 'ここにアクセスキー';
 const containerName = 'test';
 
 // Blob Serviceクライアントの作成
